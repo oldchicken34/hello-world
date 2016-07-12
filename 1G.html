@@ -1,0 +1,228 @@
+<html>
+<head>
+
+    <title>Xuanye Li</title>
+
+    <style>
+
+        body {
+            background-color: white;
+        }
+
+        .Style1 {
+            padding: 30px;
+            font-size: 30px;
+            color: #446CB3;
+            text-align: center;
+            font-family: Raleway;
+        }
+
+        .Style2 {
+            text-align: center;
+            visibility: hidden;
+        }
+
+        .Style3 {
+            padding: 30px;
+            background-color: #22A7F0;
+            color: white;
+            text-align: center;
+            font-family: Lato;
+            font-size: 20px;
+        }
+
+        .Style4 {
+            padding: 30px;
+            background-color: #22A7F0;
+            color: white;
+            text-align: center;
+            font-size: 54px;
+            font-family: Corbert;
+        }
+
+        .Style5 {
+            padding: 30px;
+            background-color: #446CB3;
+            color: white;
+            text-align: center;
+            font-size: 42px;
+            font-family: Raleway;
+        }
+
+        IMG.displayed {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 240px;
+            height: 340px;
+            padding: 45px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="Style4">
+    Welcome to the Xavier School Lost and Found
+</div>
+
+<div class="Style5">
+    Cheap Items
+</div>
+
+<br>
+<center>
+    <img src="Images/1.png" class="displayed">
+    <img src="Images/2.png" class="displayed">
+    <img src="Images/3.png" class="displayed">
+</center>
+
+<div class="Style1">
+    Water Jugs: <a id="water_jugs">0</a>
+    | Lunch Boxes: <a id="lunch_boxes">0</a>
+    | School Materials: <a id="pencil_cases">0</a>
+</div>
+
+<div class="Style2">
+    <button id="admin1" onClick="number_water_jugs()"> Submit </button>
+    <button id="admin2" onClick="number_lunch_boxes()">Submit</button>
+    <button id="admin3" onClick="number_pencil_cases()">Submit</button>
+</div>
+<br>
+<div class="Style5">
+    Expensive Items
+</div>
+
+<center>
+    <img src="Images/4.png" class="displayed">
+    <img src="Images/5.png" class="displayed">
+    <img src="Images/6.png" class="displayed">
+</center>
+
+<div class="Style1">
+    School Bags: <a id="small_bags">0</a>
+    | Gadgets: <a id="ipads">0</a>
+    | Accessories: <a id="cellphones">0</a>
+</div>
+
+<div class="Style2">
+    <button id="admin4" onClick="number_small_bags()">Submit</button>
+    <button id="admin5" onClick="number_ipads()">Submit</button>
+    <button id="admin6" onClick="number_cellphones()">Submit</button>
+    <br><br>
+</div>
+
+<div class="Style3">
+    Administrator Login
+    <br>
+    Username:
+    <input type = "Text" id="input1" placeholder="Type your username here."><br>
+    Password:
+    <input type = "Password" id="input2" placeholder="Type your password here."><br>
+    <hr>
+    <button onClick="verify()">Submit</button>
+    <p id="result">This checks if passwords match</p>
+    <p> Wrong Attempts: <a id="clicks">0</a> </p>
+    <hr>
+    <div class="Style2">
+        <button id="admin7" onClick = "email(); return false">Send Report</button>
+    </div>
+</div>
+
+<div class="Style5">
+    Note: Xavier School will donate unclaimed items by the end of each quarters.
+</div>
+
+<script>
+
+    var clicks = 0;
+    function verify() {
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        if (x == "admin", y == "1234"){
+            document.getElementById("result").innerHTML="Passwords Match!";
+            document.getElementById("admin1").style.visibility = "visible";
+            document.getElementById("admin2").style.visibility = "visible";
+            document.getElementById("admin3").style.visibility = "visible";
+            document.getElementById("admin4").style.visibility = "visible";
+            document.getElementById("admin5").style.visibility = "visible";
+            document.getElementById("admin6").style.visibility = "visible";
+            document.getElementById("admin7").style.visibility = "visible";
+        }
+        else {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+            document.getElementById("result").innerHTML = "Passwords do not match. Please check your password.";
+            if (clicks >= 3) {
+                alert("Intruder Detected. Tracing IP Address.");
+            }
+        }
+    }
+
+    var water_jugs = 0;
+    function number_water_jugs() {
+        var add_water_jugs = prompt ("What number would you add?");
+        if (add_water_jugs != null) {
+            water_jugs += Number(add_water_jugs);
+            document.getElementById("water_jugs").innerHTML = water_jugs;
+        }
+    }
+
+    var lunch_boxes = 0;
+    function number_lunch_boxes() {
+        var add_lunch_boxes = prompt ("What number would you add?");
+        if (add_lunch_boxes != null) {
+            lunch_boxes += Number(add_lunch_boxes);
+            document.getElementById("lunch_boxes").innerHTML = lunch_boxes;
+        }
+    }
+
+    var pencil_cases = 0;
+    function number_pencil_cases() {
+        var add_pencil_cases = prompt ("What number would you add?");
+        if (add_pencil_cases != null) {
+            pencil_cases += Number(add_pencil_cases);
+            document.getElementById("pencil_cases").innerHTML = pencil_cases;
+        }
+    }
+
+    var small_bags = 0;
+    function number_small_bags() {
+        var add_small_bags = prompt ("What number would you add?");
+        if (add_small_bags != null) {
+            small_bags += Number(add_small_bags);
+            document.getElementById("small_bags").innerHTML = small_bags;
+        }
+    }
+
+    var ipads = 0;
+    function number_ipads() {
+        var add_ipads = prompt ("What number would you add?");
+        if (add_ipads != null) {
+            ipads += Number(add_ipads);
+            document.getElementById("ipads").innerHTML = ipads;
+        }
+    }
+
+    var cellphones = 0;
+    function number_cellphones() {
+        var add_cellphones = prompt ("What number would you add?");
+        if (add_cellphones != null) {
+            cellphones += Number(add_cellphones);
+            document.getElementById("cellphones").innerHTML = cellphones;
+        }
+    }
+
+    var u = window.location;
+    var subject = "Daily ODS Report on Lost and Found";
+    var body = Number(water_jugs) + " Water Jugs " + Number(lunch_boxes) + " Lunch Boxes " + Number(pencil_cases)
+            + " School Materials " + Number(small_bags) + " School Bags " + Number(ipads)
+            + " Gadgets " + Number(cellphones) + " Accessories "
+    function email() {
+        window.location = "mailto:xuli18@xs.edu.ph" + "?subject=" + subject + "&body=" + body + " " + u;
+    }
+
+</script>
+
+</body>
+</html>

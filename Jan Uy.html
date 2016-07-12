@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>
+        SA
+    </title>
+</head>
+<body>
+
+<style>
+    body{
+        font-family:helvetica;
+        font-size:15px;
+        padding:50px;
+    }
+
+    .h{
+        color:white;
+        background-color:black
+    }
+
+    td{
+        padding:25px;
+    }
+
+    .color1
+    {
+        background-color:yellow;
+        padding:20px;
+        text-align:center
+    }
+
+    .color2
+    {
+        background-color:blue;
+        padding:20px;
+        text-align:center
+    }
+
+    .color3
+    {
+        background-color:green;
+        padding:20px;
+        text-align:center
+    }
+</style>
+
+<body>
+<h2>CEA (Classroom Easy Attendance) </h2>
+<script>
+
+    function colorSwap(td)
+    {
+        if (td.className == "color1") {
+            td.className = "color2";
+        }
+        else {
+            if (td.className == "color2") {
+            td.className = "color3";
+        }
+            else if (td.className == "color3") {
+                td.className = "color1";
+            }
+        }
+        var yellow = document.getElementsByClassName("color1");
+        var blue = document.getElementsByClassName("color2");
+        var green = document.getElementsByClassName("color3");
+        document.getElementById("yellow").innerHTML = yellow.length;
+        document.getElementById("blue").innerHTML = blue.length;
+        document.getElementById("green").innerHTML = green.length;
+    }
+</script>
+
+Yellow: <a id="yellow">40</a>
+<br>
+Green: <a id="blue">0</a>
+<br>
+Blue: <a id="green">0</a>
+<br>
+
+<table border="1">
+    <tr class="h">
+        <td class="color ">Row1</td><td>Row2</td><td>Row3</td><td>Row4</td><td>Row5</td><td>Row6</td><td>Row7</td><td>Row8</td>
+    </tr>
+    <tr>
+        <td  class="color1"  onclick="colorSwap(this)">Student 1</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 6</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 11</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 16</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 21</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 26</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 31</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 36</td>
+    </tr>
+
+    <tr>
+        <td  class="color1"  onclick="colorSwap(this)">Student 2</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 7</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 12</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 17</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 22</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 27</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 32</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 37</td>
+    </tr>
+
+    <tr>
+        <td  class="color1"  onclick="colorSwap(this)">Student 3</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 8</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 13</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 18</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 23</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 28</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 33</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 38</td>
+    </tr>
+
+    <tr>
+        <td  class="color1"  onclick="colorSwap(this)">Student 4</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 9</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 14</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 19</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 24</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 29</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 34</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 39</td>
+    </tr>
+
+    <tr>
+        <td  class="color1"  onclick="colorSwap(this)">Student 5</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 10</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 15</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 20</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 25</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 30</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 35</td>
+        <td  class="color1"  onclick="colorSwap(this)">Student 40</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

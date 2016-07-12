@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>
+        SA
+    </title>
+</head>
+<h2>
+
+<style>
+
+    table {
+        height: 100%;
+        width: 100%;
+        font-family: Helvetica Neue;
+        font-size: 30px;
+    }
+
+    tr{
+        color:white;
+        background-color:black;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .InWorkroom {
+        background-color:dodgerblue;
+        text-align:center;
+        padding:25px;
+    }
+
+    .Eating {
+        background-color:indianred;
+        text-align:center;
+        padding:25px;
+    }
+
+    .GoneHome {
+        background-color:greenyellow;
+        text-align:center;
+        padding:25px;
+    }
+
+    .style1 {
+        background-color: cornflowerblue;
+        color: white;
+        font-family: Trebuchet MS;
+        padding: 20px;
+        font-size: 40px;
+        text-align:center;
+    }
+
+    .style2 {
+        background-color: cornflowerblue;
+        color: white;
+        font-family: Arial;
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+<div class="style1">
+    Teacher Attendance
+</div>
+
+<table>
+    <tr>
+        <td class="color ">CLE</td>
+        <td>Social Science</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Filipino</td>
+        <td>English</td>
+    </tr>
+    <tr>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 1</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 6</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 11</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 16</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 21</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 26</td>
+    </tr>
+
+    <tr>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 2</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 7</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 12</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 17</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 22</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 27</td>
+    </tr>
+
+    <tr>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 3</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 8</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 13</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 18</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 23</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 28</td>
+    </tr>
+
+    <tr>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 4</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 9</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 14</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 19</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 24</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 29</td>
+    </tr>
+
+    <tr>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 5</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 10</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 15</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 20</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 25</td>
+        <td  class="InWorkroom"  onclick="changecolor(this)">Teacher 30</td>
+    </tr>
+
+</table>
+
+<div class="style2">
+    In Workroom: <a id="dodgerblue">30</a>
+    <br>
+    Eating: <a id="indianred">0</a>
+    <br>
+    Gone Home: <a id="greenyellow">0</a>
+</div>
+
+<script>
+
+    function changecolor(td)
+    {
+        if (td.className == "InWorkroom") {
+            td.className = "Eating";
+        }
+        else {
+            if (td.className == "Eating") {
+                td.className = "GoneHome";
+            }
+            else if (td.className == "GoneHome") {
+                td.className = "InWorkroom";
+            }
+        }
+        var dodgerblue = document.getElementsByClassName("InWorkroom");
+        var indianred = document.getElementsByClassName("Eating");
+        var greenyellow = document.getElementsByClassName("GoneHome");
+        document.getElementById("dodgerblue").innerHTML = dodgerblue.length;
+        document.getElementById("indianred").innerHTML = indianred.length;
+        document.getElementById("greenyellow").innerHTML = greenyellow.length;
+    }
+</script>
+</body>
+</html>

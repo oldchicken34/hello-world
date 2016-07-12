@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Sample</title>
+        <h1><center></center> </h2>
+            <style>
+                h2 {
+                    border: 2px solid red;
+                    background-color:white;
+                    color:red;
+                    padding:4px;
+                    border-radius:800px;
+                    letter-spacing:5px;
+                    text-align:center;
+                    font-size:30;
+                    width:150;
+                    height:40
+
+                }
+                input {
+                    width:25;
+                    text-align:center;
+                }
+                p {
+                    font-size: 50;
+                    text-align: center;
+                }
+                div.background {
+                    background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlD16Rjlt9YGCm94Ij0LX3ZOWsuiwmqQtfkfSl5Aj8LqpBP0B5CsDypLGA) repeat;
+                    border: 2px solid black;
+                }
+
+                div.transbox {
+                    margin: 30px;
+                    background-color: #ffffff;
+                    border: 1px solid black;
+                    opacity: 0.65;
+                    filter: alpha(opacity=60); /* For IE8 and earlier */
+                }
+
+                div.transbox p {
+                    margin: 5%;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                body {
+                    background-color:#ffff00;
+                }
+                .color1
+                {
+                    background-color: grey
+                }
+                .color2
+                {
+                    background-color: grey
+                }
+                td
+                {
+                    font-size: 50 px;
+                    padding: 15 px;
+                    text-align: center
+                }
+                }
+            </style>
+
+            <body>
+            <div class="background">
+                <div class="transbox">
+                    <p>Xavier School Canteen Table Vacancy</p>
+                </div>
+            </div>
+            <div class="transbox">
+                <table>
+                    <td class="color2"> Table 1 </td>
+                </table>
+            </div>
+            <center><h2 id="Result"> Table 1</h1>
+        <input type="text" id="input1"><br><br>
+        Slots Available= <p id="max">10</p><br><br>
+        <button onclick="getValue()">Submit</button></center>
+
+        <center><h2 id="result"> Table 2</h1>
+            <input type="text" id="input2"><br><br>
+            Slots Available= <p id="Max">10</p><br><br>
+            <button onclick="getvalue()">Submit</button></center>
+
+        <center><h2 id="Sesult"> Table 3</h1>
+            <input type="text" id="input3"><br><br>
+            Slots Available= <p id="wax">10</p><br><br>
+            <button onclick="getWalue()">Submit</button></center>
+
+        <script>
+            function getValue(){
+                var x=document.getElementById("input1").value;
+                var y=document.getElementById("max").value=10;
+                var z= "FULL";
+                var a= "VACANT";
+                if (x >= 10) {
+                    document.getElementById("Result").innerHTML = z;
+                    document.getElementById("max").innerHTML = 0;
+
+                }
+                else {}
+                if (x < 10) {
+                    document.getElementById("Result").innerHTML = a;
+                    document.getElementById("max").innerHTML = y - x;
+                }
+                else {}
+            }
+            function getvalue(){
+                var x=document.getElementById("input2").value;
+                var y=document.getElementById("Max").value = 10;
+                var z= "FULL";
+                var a= "VACANT";
+                if (x >=10) {
+                    document.getElementById("result").innerHTML = z;
+                    document.getElement("Max").innerHTML = 0;
+                }
+                else{}
+                if (x < 10) {
+                    document.getElementById("result").innerHTML = a;
+                    document.getElementById("Max").innerHTML = y - x;
+                }
+                else {}
+            }
+            function getWalue(){
+                var x=document.getElementById("input3").value;
+                var y=document.getElementById("wax").value = 10;
+                var z= "FULL";
+                var a="VACANT";
+                if (x >=10) {
+                    document.getElementById("Sesult").innerHTML = z;
+                    document.getElement("wax").innerHTML = 0;
+                }
+                else{}
+                if (x < 10) {
+                    document.getElementById("Sesult").innerHTML = a;
+                    document.getElementById("wax").innerHTML = y - x;
+                }
+                else{}
+            }
+        </script>
+
+        </body>
+        </html>

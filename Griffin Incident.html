@@ -1,0 +1,132 @@
+<html>
+<head>
+
+    <title>Anthony</title>
+
+    <style>
+
+        .header {
+            padding: 30px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 54px;
+            font-family: Thonburi;
+        }
+
+        .mainui {
+            padding: 30px;
+            color: black;
+            font-size: 42px;
+            font-family: Avenir;
+        }
+
+        .box {
+            display: inline-block;
+            padding: 30px;
+            text-align: center;
+            margin: auto;
+            border: 3px solid black;
+            font-size: 40px;
+            font-family: Helvetica Neue;
+        }
+
+        .textbox {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #848484;
+            outline:0;
+            width: 275px;
+            height: 40px;
+        }
+
+        .missinginput {
+            background-color: cornflowerblue;
+            color: white;
+            font-family: Helvetica;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .sidebar {
+            line-height:30px;
+            background-color:#FFCC00;
+            height:400px;
+            width:200px;
+            float:right;
+            padding:5px;
+        }
+
+        .boxes {
+            display: block;
+            background-color: cornflowerblue;
+            text-decoration:none;
+            text-align: center;
+            font-family: Helvetica Neue;
+            font-size: 30px;
+            color: white;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .name {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-family: Thonburi;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    Anthony
+    <div class="name">
+        Name of Person, Section and Class No.
+    </div>
+</div>
+
+<div class="sidebar">
+    <center>
+        <button onclick="send()" class="boxes">Send to ODS</button>
+        <br>
+        <button onclick="print()" class="boxes">Print Out</button>
+        <br>
+        <a href="Griffin Main Menu.html" class="boxes">Home</a>
+    </center>
+</div>
+
+<div class="mainui">
+    Name: <input class="textbox" type="text">
+    <br>
+    Date of Incident: <input class="textbox" type="text">
+    <br>
+    Report Details: <input class="textbox" type="text">
+</div>
+
+<br><br><br><br>
+
+<p id="missing" class="missinginput">
+    *Keep two copies, email one to ODS, and print on for yourself
+</p>
+
+<script>
+    function send() {
+        alert("Your report has been sent. Redirecting to Home Page");
+        window.location="Griffin Main Menu.html";
+    }
+
+    function print() {
+        alert("Your report is currently processing for printing. Redirecting to Home Page");
+        window.location="Griffin Main Menu.html";
+    }
+</script>
+
+</body>
+</html>

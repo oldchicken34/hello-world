@@ -1,0 +1,104 @@
+<html>
+<head>
+
+    <title>Xuanye Li</title>
+
+    <style>
+
+        body
+        {
+            background-color: #22A7F0
+        }
+
+        .floating-box {
+            vertical-align: middle;
+            margin: auto;
+            width: 30%;
+            border: 3px solid #1f3a93;
+            padding: 10px;
+            background-color: #6BB9F0;
+        }
+
+        .Style1
+        {
+            text-align: center;
+            font-family: Helvetica;
+            font-size: 20px;
+        }
+
+        .Style2
+        {
+            text-align: center;
+            font-family: Helvetica Neue;
+        }
+
+        .Style3 {
+            padding: 30px;
+            background-color: #446CB3;
+            color: white;
+            text-align: center;
+            font-size: 48px;
+            font-family: copperplate;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="Style3">
+    Music Reservation
+</div>
+<br><br><br>
+
+<!--Hi
+So the thing we wanted for computer is
+Log in you email and pass
+Then after the log in it goes to the musical instrument reservation
+Then it shows how many are available, what time you can borrow, availability and what kind of instrument
+-->
+
+<div class="floating-box">
+<div class="Style1">
+    Verify Password
+</div>
+<br>
+
+<div class="Style2">
+    Username:
+    <input type="Text" id="input1"><br>
+    Password:
+    <input type="Password" id="input2"><br>
+    <hr>
+    <button onClick="verify()">Submit</button>
+</div>
+
+<div class="Style2">
+    <p id="result">This checks if passwords match</p>
+</div>
+
+<div class="Style2">
+    <p>Wrong Attempts: <a id="clicks">0</a></p>
+</div>
+</div>
+
+<script>
+
+    var clicks = 0;
+    function verify() {
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        if (x == "admin", y == "1234"){
+            document.getElementById("result").innerHTML="Passwords Match!";
+        }
+        else {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+            document.getElementById("result").innerHTML = "Passwords do not match. Please check your password."
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>This is a page</title>
+</head>
+<body bgcolor="#ffffff" text="#000000" id=all>
+<form name="Mailer">
+    E-MAIL THIS LINK
+    <br>
+    Enter recipient's e-mail:
+    <br>
+    <input type="text" name="address" size="25">
+    <br>
+    <input type="button" value="Send this URL" onClick="mailThisUrl();">
+</form>
+<script>
+    u = window.location;
+    m = "I thought this might interest you...";
+    function mailThisUrl(){
+        window.location = "mailto:"+document.Mailer.address.value+"?subject="+m+"&body="+document.title+" "+u;
+    }
+</script>
+</body>
+</html>

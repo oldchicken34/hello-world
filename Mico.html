@@ -1,0 +1,226 @@
+<html>
+<head>
+    <title>
+        SA
+    </title>
+</head>
+
+    <style>
+
+        body {
+            background-color: #e1e8f0;
+        }
+
+        table {
+            width: 100%;
+            font-family: Helvetica Neue;
+            font-size: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .color1A {
+            background-color:#F3D841;
+            text-align:center;
+            padding:25px;
+        }
+
+        .color1B {
+            background-color:#FB8C00;
+            text-align:center;
+            padding:25px;
+        }
+
+        .color2A {
+            background-color:#F3D841;
+            text-align:center;
+            padding:25px;
+        }
+
+        .color2B {
+            background-color:#FB8C00;
+            text-align:center;
+            padding:25px;
+        }
+
+        .color3A {
+            background-color:#F3D841;
+            text-align:center;
+            padding:25px;
+        }
+
+        .color3B {
+            background-color:#FB8C00;
+            text-align:center;
+            padding:25px;
+        }
+
+        .style1 {
+            background-color: #6ed3cf;
+            color: white;
+            font-family: Helvetica;
+            padding: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .style2 {
+            background-color: #9068be;
+            color: white;
+            font-family: Helvetica;
+            padding: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .style3 {
+            background-color: #e62739;
+            color: white;
+            font-family: Helvetica;
+            padding: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .style4 {
+            background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlD16Rjlt9YGCm94Ij0LX3ZOWsuiwmqQtfkfSl5Aj8LqpBP0B5CsDypLGA) repeat;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        .style5 {
+            color: black;
+            margin: 20px;
+            font-family: Trebuchet MS;
+            padding: 40px;
+            font-size: 40px;
+            text-align:center;
+            background-color: #ffffff;
+            opacity: 0.65;
+            border: 1px solid black;
+        }
+
+    </style>
+<body>
+
+    <div class="style4">
+        <div class="style5">
+            Xavier School Canteen Table Vacancy
+        </div>
+    </div>
+
+    <div class="style1">
+        Table 1
+
+    <table>
+        <tr>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 1</td>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 2</td>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 3</td>
+        </tr>
+        <tr>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 4</td>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 5</td>
+            <td  class="color1A"  onclick="changetable1(this)">Seat 6</td>
+        </tr>
+    </table>
+
+        Vacant: <a id="Vacant1">10</a>
+        <br>
+        Taken: <a id="Taken1">0</a>
+        <br>
+    </div>
+    <br>
+
+    <div class="style2">
+        Table 2
+
+    <table>
+        <tr>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 1</td>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 2</td>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 3</td>
+        </tr>
+        <tr>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 4</td>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 5</td>
+            <td  class="color2A"  onclick="changetable2(this)">Seat 6</td>
+        </tr>
+    </table>
+
+        Vacant: <a id="Vacant2">10</a>
+        <br>
+        Taken: <a id="Taken2">0</a>
+        <br>
+    </div>
+    <br>
+
+    <div class="style3">
+        Table 3
+
+    <table>
+        <tr>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 1</td>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 2</td>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 3</td>
+        </tr>
+        <tr>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 4</td>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 5</td>
+            <td  class="color3A"  onclick="changetable3(this)">Seat 6</td>
+        </tr>
+    </table>
+
+        Vacant:<a id="Vacant3">10</a>
+        <br>
+        Taken: <a id="Taken3">0</a>
+        <br>
+    </div>
+
+    <script>
+
+        function changetable1(td)
+        {
+            if (td.className == "color1A") {
+                td.className = "color1B";
+            }
+            else if (td.className == "color1B") {
+                td.className = "color1A";
+            }
+            var Vacant1 = document.getElementsByClassName("color1A");
+            var Taken1 = document.getElementsByClassName("color1B");
+            document.getElementById("Vacant1").innerHTML = Vacant1.length;
+            document.getElementById("Taken1").innerHTML = Taken1.length;
+        }
+
+        function changetable2(td)
+        {
+            if (td.className == "color2A") {
+                td.className = "color2B";
+            }
+            else if (td.className == "color2B") {
+                td.className = "color2A";
+            }
+            var Vacant2 = document.getElementsByClassName("color2A");
+            var Taken2 = document.getElementsByClassName("color2B");
+            document.getElementById("Vacant2").innerHTML = Vacant2.length;
+            document.getElementById("Taken2").innerHTML = Taken2.length;
+        }
+
+        function changetable3(td)
+        {
+            if (td.className == "color3A") {
+                td.className = "color3B";
+            }
+            else if (td.className == "color3B") {
+                td.className = "color3A";
+            }
+            var Vacant3 = document.getElementsByClassName("color3A");
+            var Taken3 = document.getElementsByClassName("color3B");
+            document.getElementById("Vacant3").innerHTML = Vacant3.length;
+            document.getElementById("Taken3").innerHTML = Taken3.length;
+        }
+    </script>
+
+</body>
+</html>

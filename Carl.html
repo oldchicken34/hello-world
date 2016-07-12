@@ -1,0 +1,98 @@
+<html>
+
+
+<head>
+    <title> Text Box </title>
+<head>
+
+
+<body>
+
+<style>
+    .box {
+        border : 3px solid;
+        padding : 15px
+    }
+</style>
+
+<script>
+
+    function  submit() {
+        var password = document.getElementById("password").value
+        var verify = document.getElementById("verify").value
+
+        if (password==verify) {
+            document.getElementById("result").innerHTML = password
+        }
+
+        else {
+            document.getElementById("result").innerHTML = "ID numbers do not match. Please try again."
+        }
+    }
+
+    function func2() {
+        if(document.getElementById('reason').value == "Traffic") {
+            document.getElementById('reason2').innerHTML = "Traffic"
+        }
+        if(document.getElementById('reason').value == "Sickness") {
+            document.getElementById('reason2').innerHTML = "Sickness"
+        }
+        if(document.getElementById('reason').value == "Woke Up Late") {
+            document.getElementById('reason2').innerHTML = "Woke Up Late"
+        }
+        if(document.getElementById('reason').value == "Others") {
+            var person=prompt("Type Reason");
+            document.getElementById("reason2").innerHTML = "This is an excused latecoming."
+        }
+    }
+
+</script>
+
+<center> <h1> Latecomers </h1> </center>
+<br><br>
+Type ID Number : <br>
+<input type="password" id="password">
+<br>
+Re-enter ID Number : <br>
+<input type="password" id="verify">
+
+<hr>
+
+<center> <button onclick="submit()"> Submit</button> </center>
+
+<br>
+<br><br>
+
+Please check your ID number below.
+
+<br><br>
+
+ID Number:
+
+<div id="result" class="box">
+</div>
+
+<br>
+<br><br>
+
+<center> REASON FOR LATECOMING:
+
+    <br>
+
+    <select id="reason" onchange="func2()">
+        <option></option>
+        <option id="Traffic">Traffic</option>
+        <option id="Sickness">Sickness</option>
+        <option id="Woke Up Late">Woke Up Late</option>
+        <option id="Others">Others</option>
+    </select>
+
+    <br><br>
+
+    <div class="box" id="reason2">
+    </div>
+
+</body>
+
+
+</html>

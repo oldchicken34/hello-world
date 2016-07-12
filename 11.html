@@ -1,0 +1,81 @@
+<html>
+<head>
+
+    <title>Xuanye Li</title>
+
+    <style>
+
+        .Style1
+        {
+            text-align: center;
+            font-family: Helvetica;
+            font-size: 20px;
+        }
+
+        .Style2
+        {
+            text-align: center;
+            font-family: Helvetica Neue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="Style1">
+    Verify Password
+</div>
+<br>
+
+<div class="Style2">
+    Type Password:
+    <input type="Text" id="input1"><br>
+    Confirm Password:
+    <input type="Password" id="input2"><br>
+    <hr>
+    <button onClick="verify()">Submit</button>
+</div>
+
+<button onClick="addnumber()">Submit</button>
+<input type="Text" id="input3"><br>
+
+<div class="Style2">
+    <p id="result">This checks if passwords match</p>
+</div>
+
+<div class="Style2">
+    <p>Wrong Attempts: <a id="clicks">0</a></p>
+</div>
+
+Water Jugs: <a id="water_jugs1">0</a>
+
+<script>
+
+    var clicks = 0;
+    function verify() {
+        var x = document.getElementById("input1").value;
+        var y = document.getElementById("input2").value;
+        var z = document.getElementById("input3").value;
+        if (x == y){
+            document.getElementById("result").innerHTML="Passwords Match!";
+        }
+        else {
+            clicks += Number(z);
+            document.getElementById("clicks").innerHTML = clicks;
+            document.getElementById("result").innerHTML="Passwords do not match. Please check your password."
+        }
+    }
+
+    function addnumber() {
+        var water_jugs = prompt("Please enter the amount of Water Jugs you would like to add");
+        if (water_jugs != null) {
+            clicks += Number(water_jugs);
+            document.getElementById("water_jugs1").innerHTML = water_jugs1;
+        }
+    }
+
+</script>
+
+</body>
+</html>

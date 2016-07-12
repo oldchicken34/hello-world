@@ -1,0 +1,385 @@
+<html>
+<head>
+
+    <title>Music Website</title>
+
+    <style>
+
+        body {
+            background-color: white;
+        }
+
+        .Style2 {
+            padding: 30px;
+            background-color: #FFCC00;
+            text-align: center;
+            font-size: 54px;
+            font-family: Corbert;
+        }
+
+        .Style3 {
+            display: inline-block;
+            text-align: center;
+            margin: auto;
+            width: 33.08%;
+            border: 3px solid black;
+            font-size: 40px;
+            font-family: Helvetica Neue;
+        }
+
+        .Style4 {
+            padding: 30px;
+            background-color: #FF555A;
+            color: white;
+            text-align: center;
+            font-size: 54px;
+            font-family: Corbert;
+        }
+
+        .Style5 {
+            padding: 30px;
+            background-color: #446CB3;
+            color: white;
+            text-align: center;
+            font-size: 42px;
+            font-family: Raleway;
+        }
+
+        .Style6 {
+            display: inline-block;
+            text-align: center;
+            margin: auto;
+            width: 49.7%;
+            border: 3px solid black;
+            font-size: 40px;
+            font-family: Helvetica Neue;
+        }
+
+        .Style7  {
+            display: inline-block;
+            text-align: center;
+            margin: auto;
+            width: 24.73%;
+            border: 3px solid black;
+            font-size: 40px;
+            font-family: Helvetica Neue;
+        }
+
+        IMG.displayed {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 240px;
+            height: 340px;
+            padding: 45px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="Style4">7
+    Music Instruments Reservation
+</div>
+
+<div class="Style5">
+    String Instruments
+</div>
+
+<div class="Style3">
+    <img src="Images2/1.jpg" class="displayed">
+    <br>
+    Steel String Acoustic Guitar: <a id="steel_guitar">3</a> Left
+    <br>
+    Time: <select id="steel_guitar_time" class="Style3">
+        <option id="Morning_steel_guitar_time">Morning</option>
+        <option id="Recess_steel_guitar_time">Recess</option>
+        <option id="Lunch_steel_guitar_time">Lunch</option>
+        <option id="Dismissal_steel_guitar_time">Dismissal</option>
+    </select>
+    <button onClick="number_steel_guitar()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style3">
+    <img src="Images2/2.jpg" class="displayed">
+    <br>
+    Classical Nylon String Guitar: <a id="nylon_guitar">4</a> Left
+    <br>
+    Time: <select id="nylon_guitar_time" class="Style3">
+    <option id="Morning_nylon_guitar_time">Morning</option>
+    <option id="Recess_nylon_guitar_time">Recess</option>
+    <option id="Lunch_nylon_guitar_time">Lunch</option>
+    <option id="Dismissal_nylon_guitar_time">Dismissal</option>
+</select>
+    <button onClick="number_nylon_guitar()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style3">
+    <img src="Images2/3.jpg" class="displayed">
+    <br>
+    Ukulele: <a id="ukulele">5</a> Left
+    <br>
+    Time: <select id="ukulele_time" class="Style3">
+    <option id="Morning_ukulele_time">Morning</option>
+    <option id="Recess_ukulele_time">Recess</option>
+    <option id="Lunch_ukulele_time">Lunch</option>
+    <option id="Dismissal_ukulele_time">Dismissal</option>
+</select>
+    <button onClick="number_ukulele()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style5">
+    Keyboard Instruments
+</div>
+
+<div class="Style6">
+    <img src="Images2/4.jpg" class="displayed">
+    <br>
+    Keyboard: <a id="keyboard">2</a> Left
+    <br>
+    Time: <select id="keyboard_time" class="Style3">
+    <option id="Morning_keyboard_time">Morning</option>
+    <option id="Recess_keyboard_time">Recess</option>
+    <option id="Lunch_keyboard_time">Lunch</option>
+    <option id="Dismissal_keyboard_time">Dismissal</option>
+</select>
+    <button onClick="number_keyboard()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style6">
+    <img src="Images2/5.png" class="displayed">
+    <br>
+    Grand Piano: <a id="grand_piano">1</a> Left
+    <br>
+    Time: <select id="grand_piano_time" class="Style3">
+    <option id="Morning_grand_piano_time">Morning</option>
+    <option id="Recess_grand_piano_time">Recess</option>
+    <option id="Lunch_grand_piano_time">Lunch</option>
+    <option id="Dismissal_grand_piano_time">Dismissal</option>
+</select>
+    <button onClick="number_grand_piano()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style5">
+    Percussion Instruments
+</div>
+
+<div class="Style7">
+    <img src="Images2/6.png" class="displayed">
+    <br>
+    Drum Kit: <a id="drum_kit">1</a> Left
+    <br>
+    Time: <select id="drum_kit_time" class="Style3">
+    <option id="Morning_drum_kit_time">Morning</option>
+    <option id="Recess_drum_kit_time">Recess</option>
+    <option id="Lunch_drum_kit_time">Lunch</option>
+    <option id="Dismissal_drum_kit_time">Dismissal</option>
+</select>
+    <button onClick="number_drum_kit()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style7">
+    <img src="Images2/7.jpg" class="displayed">
+    <br>
+    Tambourine: <a id="tambourine">5</a> Left
+    <br>
+    Time: <select id="tambourine_time" class="Style3">
+    <option id="Morning_tambourine_time">Morning</option>
+    <option id="Recess_tambourine_time">Recess</option>
+    <option id="Lunch_tambourine_time">Lunch</option>
+    <option id="Dismissal_tambourine_time">Dismissal</option>
+</select>
+    <button onClick="number_tambourine()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style7">
+    <img src="Images2/8.jpg" class="displayed">
+    <br>
+    Maracas: <a id="maracas">3</a> Left
+    <br>
+    Time: <select id="maracas_time" class="Style3">
+    <option id="Morning_maracas_time">Morning</option>
+    <option id="Recess_maracas_time">Recess</option>
+    <option id="Lunch_maracas_time">Lunch</option>
+    <option id="Dismissal_maracas_time">Dismissal</option>
+</select>
+    <button onClick="number_maracas()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style7">
+    <img src="Images2/9.jpg" class="displayed">
+    <br>
+    Kahon: <a id="kahon">2</a> Left
+    <br>
+    Time: <select id="_kahon_time" class="Style3">
+    <option id="Morning_kahon_time">Morning</option>
+    <option id="Recess_kahon_time">Recess</option>
+    <option id="Lunch_kahon_time">Lunch</option>
+    <option id="Dismissal_kahon_time">Dismissal</option>
+</select>
+    <button onClick="number_kahon()" class="Style3"> Submit </button>
+</div>
+
+<div class="Style2">
+    Note: Damaged Instruments would be paid in full.
+</div>
+
+<script>
+
+    var steel_guitar = 3;
+    function number_steel_guitar() {
+        if (document.getElementById("steel_guitar_time").value != "Morning") {
+            var subtract_steel_guitar = prompt ("How many would you borrow?");
+            if (subtract_steel_guitar <= steel_guitar) {
+                steel_guitar += -Number(subtract_steel_guitar);
+                document.getElementById("steel_guitar").innerHTML = steel_guitar;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var nylon_guitar = 4;
+    function number_nylon_guitar() {
+        if (document.getElementById("nylon_guitar_time").value != "Recess") {
+            var subtract_nylon_guitar = prompt ("How many would you borrow?");
+            if (subtract_nylon_guitar <= nylon_guitar) {
+                nylon_guitar += -Number(subtract_nylon_guitar);
+                document.getElementById("nylon_guitar").innerHTML = nylon_guitar;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var ukulele = 5;
+    function number_ukulele() {
+        if (document.getElementById("ukulele_time").value != "Morning") {
+            var subtract_ukulele = prompt ("How many would you borrow?");
+            if (subtract_ukulele <= ukulele) {
+                ukulele += -Number(subtract_ukulele);
+                document.getElementById("ukulele").innerHTML = ukulele;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var keyboard = 2;
+    function number_keyboard() {
+        if (document.getElementById("keyboard_time").value != "Lunch") {
+            var subtract_keyboard = prompt ("How many would you borrow?");
+            if (subtract_keyboard <= keyboard) {
+                keyboard += -Number(subtract_keyboard);
+                document.getElementById("keyboard").innerHTML = keyboard;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var grand_piano = 1;
+    function number_grand_piano() {
+        if (document.getElementById("grand_piano_time").value != "Dismissal") {
+            var subtract_grand_piano = prompt ("How many would you borrow?");
+            if (subtract_grand_piano <= grand_piano) {
+                grand_piano += -Number(subtract_grand_piano);
+                document.getElementById("grand_piano").innerHTML = grand_piano;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var drum_kit = 1;
+    function number_drum_kit() {
+        if (document.getElementById("drum_kit_time").value != "Morning") {
+            var subtract_drum_kit = prompt ("How many would you borrow?");
+            if (subtract_drum_kit <= drum_kit) {
+                drum_kit += -Number(subtract_drum_kit);
+                document.getElementById("drum_kit").innerHTML = drum_kit;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var tambourine = 5;
+    function number_tambourine() {
+        if (document.getElementById("tambourine_time").value != "Dismissal") {
+            var subtract_tambourine = prompt ("How many would you borrow?");
+            if (subtract_tambourine <= tambourine) {
+                tambourine += -Number(subtract_tambourine);
+                document.getElementById("tambourine").innerHTML = tambourine;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var maracas = 3;
+    function number_maracas() {
+        if (document.getElementById("maracas_time").value != "Dismissal") {
+            var subtract_maracas = prompt ("How many would you borrow?");
+            if (subtract_maracas <= maracas) {
+                maracas += -Number(subtract_maracas);
+                document.getElementById("maracas").innerHTML = maracas;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+
+    var kahon = 2;
+    function number_kahon() {
+        if (document.getElementById("kahon_time").value != "Recess") {
+            var subtract_kahon = prompt ("How many would you borrow?");
+            if (subtract_kahon <= kahon) {
+                kahon += -Number(subtract_kahon);
+                document.getElementById("kahon").innerHTML = kahon;
+            }
+            else {
+                alert("There are not enough number of instruments that you can borrow.");
+            }
+        }
+        else {
+            alert("This instrument is not available at this time.");
+        }
+    }
+</script>
+
+</body>
+</html>
